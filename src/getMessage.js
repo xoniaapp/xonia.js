@@ -1,6 +1,6 @@
-const axios = require("axios");
+import axios from "axios";
 
-const baseURL = require("../config");
+import baseURL from "../config";
 
 function getMessage(token, channelID) {
     

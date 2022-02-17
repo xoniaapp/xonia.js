@@ -1,5 +1,5 @@
-const axios = require("axios");
-const baseURL = require("../config");
+import axios from "axios";
+import baseURL from "../config";
 
 /**
  * ```js
@@ -39,6 +39,6 @@ function getToken(email, password) {
         });
 }
 
-module.exports = {
+export default {
     getToken,
 }
