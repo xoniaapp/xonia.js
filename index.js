@@ -1,3 +1,3 @@
-import { getToken } from "./src/getToken";
+const { getToken } = require("./src/getToken.js");
 
-getToken("email", "password")
+const bot = new getToken("joma@tech.com", "joma@tech.com")

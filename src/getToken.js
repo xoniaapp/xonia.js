@@ -1,12 +1,14 @@
-import axios from "axios";
-import baseURL from "../config";
+const axios = require("axios");
+const baseURL = require("../config.js");
 
 /**
+ *
  * ```js
  * const { getToken } = require("xoniajs");
  * const bot = new getToken("email", "password");
  * ```
  * Don't forgot to keep the SESSION_ID secure!
+ *
  */
 
 function getToken(email, password) {
@@ -32,13 +34,11 @@ function getToken(email, password) {
             REMAINING REQUESTS = ${response.headers["x-ratelimit-remaining"]}
             SESSION_ID = ${token.toString().split(";")[0]}
             Don't forgot to keep the SESSION_ID secure!
-            `)
+            `);
         })
         .catch(function (error) {
             console.log("something went wrong!", error);
         });
 }
 
-export default {
-    getToken,
-}
+module.exports = { getToken };
