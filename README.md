@@ -11,7 +11,7 @@ ES6
 import { getToken } from "xonia.js";
 ```
 
-2. Getting acccount session key
+2. Getting account session key
 
 ```js
 const bot = new getToken("joma@tech.com", "joma@tech.com");
