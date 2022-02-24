@@ -18,7 +18,12 @@ function sendMessage(message, channel, token) {
 
     axios(config)
         .then(function (response) {
-            console.log(`| Success | Message: ${message} | Channel ID ${channel}`);
+            console.log(`
+            200 OK
+            Message: ${message}
+            Channel ID: ${channel}
+            Requests Left: ${response.headers["x-ratelimit-remaining"]}
+            `);
         })
         .catch(function (error) {
             console.log(error);
