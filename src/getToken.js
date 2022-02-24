@@ -2,13 +2,8 @@ const axios = require("axios");
 const { baseURL } = require("../config.js");
 
 /**
- *
- * ```js
- * const { getToken } = require("xoniajs");
- * const bot = new getToken("email", "password");
- * ```
- * Don't forgot to keep the SESSION_ID secure!
- *
+ * @param {string} email - The email to use for the request
+ * @param {string} password - The password to use for the request
  */
 
 function getToken(email, password) {

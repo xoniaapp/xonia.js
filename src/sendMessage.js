@@ -1,6 +1,12 @@
 const axios = require("axios");
 const { baseURL } = require("../config.js")
 
+/**
+ * @param {string} message - The message to send
+ * @param {string} channel - The channel to send the message to
+ * @param {string} token - The token to use for the request
+ */
+
 function sendMessage(message, channel, token) {
     const data = JSON.stringify({
         "text": `${message}`
@@ -26,7 +32,7 @@ function sendMessage(message, channel, token) {
             `);
         })
         .catch(function (error) {
-            console.log(error);
+            console.log("something went wrong!", error);
         });
 
 }
