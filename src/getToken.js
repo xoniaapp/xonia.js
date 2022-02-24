@@ -1,5 +1,5 @@
 const axios = require("axios");
-const baseURL = require("../config.js");
+const { baseURL } = require("../config.js");
 
 /**
  *

@@ -1,3 +1,8 @@
-const { getToken } = require("./src/getToken.js");
+const { getToken, sendMessage } = require("./src");
+const {sessionToken} = require("./config.js");
 
-const bot = new getToken("joma@tech.com", "joma@tech.com")
+const newMsg = new sendMessage(
+    "helllllllo",
+    "1487076174428377088",
+    `${sessionToken}`
+)

@@ -1,4 +1,7 @@
-const baseURL = "https://gateway.xoniaapp.com/api/";
-const sessionToken = "xa=MTY0NDk0NzEyMnxOd3dBTkRSSVJVNUNVRlJTUlU1UldVVkJVemN6V1ZsWlZEVkdRMDlaUkRjek1scE9SVTVHTkRSTFUxRTNWMFZLVlRSTVR6Vk1WRkU9fDhTqT7POe077pfWjbMlfybaKtB3ecuxOWdnuSZ5ez1f";
+let baseURL = 'https://gateway.xoniaapp.com/api/';
+let sessionToken = 'xa=MTY0NTcxNDc2OHxOd3dBTkVsR1JrRldTMU5OUTBOYVN6SXlSRkpXTWtGVFRWWkdVRlphVWxaSVUwdENOMWRDVkRkTlIwcFVVVVJJVURWUFJFbFNXVkU9fHOS1OLu7icoPYqb0epqQTFFvCNCmug7f7t_IVGeW2dz';
 
-module.exports = baseURL, sessionToken;
+module.exports = {
+    baseURL,
+    sessionToken
+}
