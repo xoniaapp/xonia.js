@@ -3,12 +3,8 @@
 ---
 
 1. First require the module
-```js Common JS
-const { getToken } = require("xonia.js");
-```
-ES6
 ```js
-import { getToken } from "xonia.js";
+const { getToken, sendMessage } = require("./src");
 ```
 
 2. Getting account session key
@@ -20,10 +16,6 @@ const bot = new getToken("joma@tech.com", "joma@tech.com");
 3. Creating Messages
 
 ```js
-const token = require("./config.js");
-const bot = new sendMessage({
-    SESSION_ID: `${token}`,
-    content:"hi mom",
-    attachment: "./path/to/file.png"
-})
+
+const newMessage = sendMessage("Hello, World!", "1487076174428377088", "sessionToken");
 ```
