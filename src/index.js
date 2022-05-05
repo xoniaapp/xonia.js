@@ -6,4 +6,4 @@ module.exports = {
     getToken,
     sendMessage,
     getMessage,
-}
+};
