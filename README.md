@@ -2,20 +2,16 @@
 
 ---
 
-1. First require the module
-```js
-const { getToken, sendMessage } = require("./src");
-```
-
-2. Getting account session key
+1. Getting account session key
 
 ```js
+const { getToken } = require("xonia.js");
 const bot = new getToken("joma@tech.com", "joma@tech.com");
 ```
 
-3. Creating Messages
+2. Creating Messages
 
 ```js
-
-const newMessage = sendMessage("Hello, World!", "1487076174428377088", "sessionToken");
+const { sendMessage } = require("xonia.js");
+sendMessage("message", "channelID", "sessionToken");
 ```
