@@ -1,2 +1,3 @@
-const { getToken, sendMessage, getMessage } = require("./src");
-const { sessionToken } = require("./config.js");
+// Example WebHook
+const { sendMessage } = require("xonia.js");
+sendMessage("**Hi, there.**", "channelID", "sessionToken");
