@@ -37,6 +37,4 @@ function sendMessage(message, channel, token) {
 
 }
 
-module.exports = {
-    sendMessage,
-}
+module.exports = { sendMessage }
