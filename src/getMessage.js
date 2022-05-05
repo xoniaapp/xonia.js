@@ -25,6 +25,4 @@ function getMessage(channel, token) {
 
 }
 
-module.exports = {
-    getMessage,
-}
+module.exports = { getMessage };
