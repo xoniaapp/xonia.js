@@ -27,8 +27,7 @@ function getToken(email, password) {
             const token = headerFindcookie["set-cookie"];
             console.log(`
             REMAINING REQUESTS = ${response.headers["x-ratelimit-remaining"]}
-            SESSION_ID = ${token.toString().split(";")[0]}
-            Don't forgot to keep the SESSION_ID secure!
+            Token = ${token.toString().split(";")[0]}
             `);
         })
         .catch(function (error) {
