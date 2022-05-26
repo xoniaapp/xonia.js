@@ -1,6 +1,6 @@
 const weather = require('weather-js');
 
-const {sendMessage} = require("../../src")
+const { sendMessage } = require("../../src");
 
 // Options:
 // search:     location name or zipcode
@@ -9,5 +9,6 @@ const {sendMessage} = require("../../src")
 weather.find({ search: 'London, United Kingdom', degreeType: 'C' }, function (err, result) {
     if (err) console.log(err);
 
-    sendMessage(result, "channeID", "your token")
+    sendMessage(result, "channeID", "your token");
 });
+// Since there isn't any websockets implementation yet we have to use a setInterval() to continue running or use a loop.
