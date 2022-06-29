@@ -1,7 +1,7 @@
-const { getToken } = require("./getToken.js");
-const { sendMessage } = require("./sendMessage.js");
-const { getMessage } = require("./getMessage.js");
-const { registerUser } = require("./registerUser")
+const { getToken } = require("./src/getToken.js");
+const { sendMessage } = require("./src/sendMessage.js");
+const { getMessage } = require("./src/getMessage.js");
+const { registerUser } = require("./src/registerUser")
 
 module.exports = {
     getToken,
