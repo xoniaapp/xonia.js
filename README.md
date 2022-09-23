@@ -1,17 +1,7 @@
-### xonia.js
+# xonia.js
 
----
+⚠️ This library doesn't support websockets yet.
 
-1. Getting account session key
+## License
 
-```js
-const { getToken } = require("xonia.js");
-const bot = new getToken("joma@tech.com", "joma@tech.com");
-```
-
-2. Creating Messages
-
-```js
-const { sendMessage } = require("xonia.js");
-sendMessage("message", "channelID", "sessionToken");
-```
+MIT
