@@ -1,6 +1,6 @@
 {
   "name": "@xoniaapp/node-sdk",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Wrapper for the Xonia API.",
   "private": true,
   "main": "./index.ts",
