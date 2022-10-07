@@ -16,6 +16,38 @@ import { account } from "xonia.js";
 })();
 ```
 
+## Realtime Usage
+
+```ts
+import { account as a, message as m } from "xonia.js"
+
+const getSession = async () => {
+    return await a.get_token("email", "password")
+}
+
+(async () => {
+    console.log("[LOG] Connected to Xonia API");
+    
+    const session_token: any = await getSession();
+    const channel_id = "channelId";
+    while (true) {
+        const d = await m.get(channel_id, session_token);
+        
+        const text = d[0].text
+        const user = d[0].user       
+
+        if (text === "info") {
+            await m.send(`${user.id}`, channel_id, session_token)
+            console.info(`[LOGGER] User: ${user.id} | Message: ${text}`);
+        }
+
+        if (text === "ping") {
+            await m.send(`i am alive!!!`, channel_id, session_token)
+        }
+    }
+})()
+```
+
 ## License
 
 ### [MIT](./LICENSE)
