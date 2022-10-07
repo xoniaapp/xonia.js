@@ -1,5 +1,5 @@
 {
-  "name": "xoniaapp",
+  "name": "xonia.js",
   "version": "1.0.0",
   "description": "Wrapper for the Xonia API.",
   "private": false,
