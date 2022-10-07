@@ -40,6 +40,13 @@ const getSession = async () => {
             await m.send(`${user.id}`, channel_id, session_token)
             console.info(`[LOGGER] User: ${user.id} | Message: ${text}`);
         }
+        
+        // Args are also supported (very buggy)
+        if (text.startsWith("!info")) {
+            if (text.split(" ")[1] === "version") {
+                await m.send("v1", channel_id, session_token)   
+            }
+        }
 
         if (text === "ping") {
             await m.send(`i am alive!!!`, channel_id, session_token)
