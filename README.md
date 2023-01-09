@@ -55,6 +55,42 @@ const getSession = async () => {
 })()
 ```
 
+### V2 is on its way (Realtime will be much easier to handle)
+```ts
+import { account as a, message as m } from "xonia.js"
+
+const getSession = async () => {
+    return await a.get_token("email", "password")
+}
+
+(async () => {
+    console.log("[LOG] Connected to Xonia API");
+    
+    const session_token: any = await getSession();
+    const channel_id = "channelId";
+    const d = await m.get(channel_id, session_token);
+    
+    const text = d[0].text
+    const user = d[0].user       
+
+        if (text === "!info") {
+            await m.send(`${user.id}`);
+        };
+        
+        if (text === "!info") {
+            if (text.args[0] === "version") {
+                await m.reply("v2");
+            };
+        };
+
+        if (text === "ping") {
+            await m.reply(`i am alive!!!`);
+        };
+    }
+})()
+
+```
+
 ## License
 
 ### [MIT](./LICENSE)
